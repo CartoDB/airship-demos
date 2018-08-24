@@ -1,0 +1,63 @@
+@import url(https://fonts.googleapis.com/css?family=Overpass+Mono|Roboto:300,400,500,700);
+@import url(https://fonts.googleapis.com/css?family=Overpass+Mono|Roboto:300,400,500,700);
+@import url(https://fonts.googleapis.com/css?family=Overpass+Mono|Roboto:300,400,500,700);
+.as-tooltip, as-histogram-widget .as-histogram-widget__tooltip {
+  display: inline-flex;
+  position: relative;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: var(--as-color-type-01, #2C2C2C);
+  color: var(--as-color-type-04, #FFF);
+  font: 12px/20px var(--font-family-base, Roboto, sans-serif); }
+  .as-tooltip::after, as-histogram-widget .as-histogram-widget__tooltip::after {
+    content: "";
+    position: absolute;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: var(--as-color-type-01, #2C2C2C); }
+  .as-tooltip--top::after {
+    top: 100%;
+    left: 50%;
+    transform: translateY(-6px) translateX(-5px) rotateZ(45deg); }
+  .as-tooltip--bot::after {
+    bottom: 100%;
+    left: 50%;
+    transform: translateY(6px) translateX(-5px) rotateZ(45deg); }
+  .as-tooltip--right::after {
+    top: 50%;
+    left: 0;
+    transform: translateY(-5px) translateX(-4px) rotateZ(45deg); }
+  .as-tooltip--left::after {
+    top: 50%;
+    right: 0;
+    transform: translateY(-4px) translateX(4px) rotateZ(45deg); }
+
+as-histogram-widget {
+  display: block;
+  background: var(--histogram-widget--background-color, #FFF); }
+  as-histogram-widget .as-histogram-widget__header {
+    font: 16px/24px var(--font-family-base, Roboto, sans-serif); }
+  as-histogram-widget .as-histogram-widget__description {
+    font: 12px/20px var(--font-family-base, Roboto, sans-serif); }
+  as-histogram-widget .as-histogram-widget__tooltip {
+    position: absolute;
+    opacity: 0; }
+    as-histogram-widget .as-histogram-widget__tooltip::after {
+      opacity: 0; }
+  as-histogram-widget svg {
+    display: block; }
+    as-histogram-widget svg .brush .selection {
+      stroke: none;
+      fill: none; }
+    as-histogram-widget svg .bar {
+      transition: all 0.3s linear;
+      opacity: 0.7;
+      cursor: pointer; }
+    as-histogram-widget svg .yAxis .tick line {
+      stroke: var(--as-color-type-02, #747474);
+      opacity: 0.1; }
+    as-histogram-widget svg .yAxis .tick:first-of-type line {
+      opacity: 0.5; }
+    as-histogram-widget svg text {
+      fill: #D1D5D7; }

@@ -1,0 +1,484 @@
+{
+  "components": [
+    {
+      "tag": "as-application-content",
+      "dependencies": [],
+      "componentClass": "ApplicationContent",
+      "componentPath": "components/as-application-content/as-application-content.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/as-application-content/as-application-content.scss"
+          ]
+        }
+      },
+      "states": [
+        {
+          "name": "sections"
+        }
+      ],
+      "methods": [
+        {
+          "name": "getSections"
+        },
+        {
+          "name": "setVisible"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      },
+      "events": [
+        {
+          "event": "load"
+        },
+        {
+          "event": "sectionChange"
+        }
+      ]
+    },
+    {
+      "tag": "as-category-widget",
+      "dependencies": [],
+      "componentClass": "CategoryWidget",
+      "componentPath": "components/as-category-widget/as-category-widget.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/as-category-widget/as-category-widget.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "categories",
+          "attr": "categories"
+        },
+        {
+          "name": "defaultBarColor",
+          "type": "String",
+          "attr": "default-bar-color"
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "attr": "description"
+        },
+        {
+          "name": "heading",
+          "type": "String",
+          "attr": "heading"
+        },
+        {
+          "name": "showClearButton",
+          "type": "Boolean",
+          "attr": "show-clear-button"
+        },
+        {
+          "name": "showHeader",
+          "type": "Boolean",
+          "attr": "show-header"
+        },
+        {
+          "name": "useTotalPercentage",
+          "type": "Boolean",
+          "attr": "use-total-percentage"
+        },
+        {
+          "name": "visibleCategories",
+          "type": "Number",
+          "attr": "visible-categories"
+        }
+      ],
+      "states": [
+        {
+          "name": "selectedCategories"
+        }
+      ],
+      "methods": [
+        {
+          "name": "clearSelection"
+        },
+        {
+          "name": "getSelectedCategories"
+        }
+      ],
+      "events": [
+        {
+          "event": "categoriesSelected"
+        }
+      ]
+    },
+    {
+      "tag": "as-histogram-widget",
+      "dependencies": [],
+      "componentClass": "HistogramWidget",
+      "componentPath": "components/as-histogram-widget/as-histogram-widget.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/as-histogram-widget/as-histogram-widget.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "color",
+          "type": "String",
+          "attr": "color",
+          "watch": [
+            "onColorChanged"
+          ]
+        },
+        {
+          "name": "colorRange",
+          "attr": "color-range"
+        },
+        {
+          "name": "data",
+          "attr": "data",
+          "watch": [
+            "onDataChanged"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "attr": "description"
+        },
+        {
+          "name": "heading",
+          "type": "String",
+          "attr": "heading"
+        },
+        {
+          "name": "selectedColor",
+          "type": "String",
+          "attr": "selected-color"
+        },
+        {
+          "name": "showClear",
+          "type": "Boolean",
+          "attr": "show-clear"
+        },
+        {
+          "name": "showHeader",
+          "type": "Boolean",
+          "attr": "show-header"
+        },
+        {
+          "name": "tooltipFormatter",
+          "attr": "tooltip-formatter"
+        }
+      ],
+      "states": [
+        {
+          "name": "tooltip"
+        }
+      ],
+      "methods": [
+        {
+          "name": "clearSelection"
+        },
+        {
+          "name": "defaultFormatter"
+        },
+        {
+          "name": "getSelection"
+        },
+        {
+          "name": "setSelection"
+        }
+      ],
+      "events": [
+        {
+          "event": "selectionChanged"
+        }
+      ]
+    },
+    {
+      "tag": "as-infowindow",
+      "dependencies": [],
+      "componentClass": "Infowindow",
+      "componentPath": "components/as-infowindow/as-infowindow.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/as-infowindow/as-infowindow.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "src",
+          "type": "String",
+          "attr": "src"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "as-range-slider",
+      "dependencies": [
+        "as-range-slider-bar",
+        "as-range-slider-thumb"
+      ],
+      "componentClass": "RangeSlider",
+      "componentPath": "components/as-range-slider/slider/as-range-slider.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/as-range-slider/slider/as-range-slider.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "disabled",
+          "type": "Boolean",
+          "attr": "disabled"
+        },
+        {
+          "name": "draggable",
+          "type": "Boolean",
+          "attr": "draggable"
+        },
+        {
+          "name": "formatValue",
+          "attr": "format-value"
+        },
+        {
+          "name": "maxValue",
+          "type": "Number",
+          "attr": "max-value"
+        },
+        {
+          "name": "minValue",
+          "type": "Number",
+          "attr": "min-value"
+        },
+        {
+          "name": "range",
+          "attr": "range",
+          "watch": [
+            "validateRange"
+          ]
+        },
+        {
+          "name": "step",
+          "type": "Number",
+          "attr": "step"
+        },
+        {
+          "name": "value",
+          "type": "Number",
+          "attr": "value",
+          "watch": [
+            "validateValue"
+          ]
+        }
+      ],
+      "states": [
+        {
+          "name": "thumbs"
+        }
+      ],
+      "events": [
+        {
+          "event": "change"
+        },
+        {
+          "event": "changeEnd"
+        },
+        {
+          "event": "changeStart"
+        }
+      ]
+    },
+    {
+      "tag": "as-range-slider-bar",
+      "dependencies": [],
+      "componentClass": "RangeSliderBar",
+      "componentPath": "components/as-range-slider/track/as-range-slider-bar.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/as-range-slider/track/as-range-slider-bar.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "disabled",
+          "type": "Boolean",
+          "attr": "disabled"
+        },
+        {
+          "name": "draggable",
+          "type": "Boolean",
+          "attr": "draggable"
+        },
+        {
+          "name": "rangeEndPercentage",
+          "type": "Number",
+          "mutable": true,
+          "attr": "range-end-percentage"
+        },
+        {
+          "name": "rangeStartPercentage",
+          "type": "Number",
+          "mutable": true,
+          "attr": "range-start-percentage"
+        },
+        {
+          "name": "stepPercentage",
+          "type": "Number",
+          "attr": "step-percentage"
+        }
+      ],
+      "listeners": [
+        {
+          "event": "mousedown",
+          "method": "onMouseDown",
+          "capture": false
+        },
+        {
+          "event": "touchstart",
+          "method": "onMouseDown",
+          "capture": false
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      },
+      "events": [
+        {
+          "event": "barChangeEnd"
+        },
+        {
+          "event": "barChangeStart"
+        },
+        {
+          "event": "barMove"
+        }
+      ]
+    },
+    {
+      "tag": "as-range-slider-thumb",
+      "dependencies": [],
+      "componentClass": "RangeSliderThumb",
+      "componentPath": "components/as-range-slider/thumb/as-range-slider-thumb.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/as-range-slider/thumb/as-range-slider-thumb.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "disabled",
+          "type": "Boolean",
+          "attr": "disabled"
+        },
+        {
+          "name": "formatValue",
+          "attr": "format-value"
+        },
+        {
+          "name": "percentage",
+          "type": "Number",
+          "attr": "percentage"
+        },
+        {
+          "name": "value",
+          "type": "Number",
+          "attr": "value"
+        },
+        {
+          "name": "valueMax",
+          "type": "Number",
+          "attr": "value-max"
+        },
+        {
+          "name": "valueMin",
+          "type": "Number",
+          "attr": "value-min"
+        }
+      ],
+      "listeners": [
+        {
+          "event": "keydown",
+          "method": "onKeyDown",
+          "passive": false,
+          "capture": false
+        },
+        {
+          "event": "mousedown",
+          "method": "onMouseDown",
+          "capture": false
+        },
+        {
+          "event": "touchstart",
+          "method": "onMouseDown",
+          "capture": false
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      },
+      "events": [
+        {
+          "event": "thumbChangeEnd"
+        },
+        {
+          "event": "thumbChangeStart"
+        },
+        {
+          "event": "thumbDecrease"
+        },
+        {
+          "event": "thumbIncrease"
+        },
+        {
+          "event": "thumbMove"
+        }
+      ]
+    },
+    {
+      "tag": "as-toolbar",
+      "dependencies": [],
+      "componentClass": "Toolbar",
+      "componentPath": "components/as-toolbar/as-toolbar.js",
+      "styles": {}
+    },
+    {
+      "tag": "as-toolbar-item",
+      "dependencies": [],
+      "componentClass": "ToolbarItem",
+      "componentPath": "components/as-toolbar-action/as-toolbar-item.js",
+      "styles": {},
+      "props": [
+        {
+          "name": "src",
+          "type": "String",
+          "attr": "src"
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "attr": "text"
+        }
+      ]
+    }
+  ],
+  "collections": [],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "0.11.0",
+    "typescriptVersion": "2.9.2"
+  },
+  "bundles": []
+}

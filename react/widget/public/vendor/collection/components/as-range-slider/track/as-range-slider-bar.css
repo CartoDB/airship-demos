@@ -1,0 +1,25 @@
+@import url(https://fonts.googleapis.com/css?family=Overpass+Mono|Roboto:300,400,500,700);
+@import url(https://fonts.googleapis.com/css?family=Overpass+Mono|Roboto:300,400,500,700);
+as-range-slider-bar {
+  --slider--rail-color--disabled: #E2E6E3; }
+  as-range-slider-bar .as-range-slider__range-bar {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    height: 2px;
+    transform: translate3d(0, -50%, 0);
+    background-color: var(--slider--range-color, #1785FB); }
+  as-range-slider-bar .as-range-slider__range-bar--disabled {
+    background-color: var(--slider--rail-color--disabled, #E2E6E3); }
+  as-range-slider-bar .as-range-slider__range-bar--draggable {
+    cursor: grab; }
+    as-range-slider-bar .as-range-slider__range-bar--draggable::after {
+      content: ' ';
+      position: absolute;
+      top: -6px;
+      left: 0;
+      width: calc(100% - 20px);
+      height: 12px;
+      transform: translate3d(10px, 0, 0); }
+  as-range-slider-bar .as-range-slider__range-bar--moving {
+    cursor: grabbing; }

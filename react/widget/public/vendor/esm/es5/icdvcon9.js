@@ -1,0 +1,2 @@
+/*! Built with http://stenciljs.com */
+import{h}from"./airship.core.js";var ToolbarItem=function(){function t(){}return t.prototype.render=function(){return h("span",{class:"as-toolbar-main__item"},h("img",{src:this.src,alt:this.text}),h("p",null,this.text))},Object.defineProperty(t,"is",{get:function(){return"as-toolbar-item"},enumerable:!0,configurable:!0}),Object.defineProperty(t,"properties",{get:function(){return{src:{type:String,attr:"src"},text:{type:String,attr:"text"}}},enumerable:!0,configurable:!0}),t}();export{ToolbarItem as AsToolbarItem};

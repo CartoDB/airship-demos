@@ -1,0 +1,2 @@
+/*! Built with http://stenciljs.com */
+const{h:t}=window.airship;class r{render(){return t("span",{class:"as-toolbar-main__item"},t("img",{src:this.src,alt:this.text}),t("p",null,this.text))}static get is(){return"as-toolbar-item"}static get properties(){return{src:{type:String,attr:"src"},text:{type:String,attr:"text"}}}}export{r as AsToolbarItem};
