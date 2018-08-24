@@ -1,6 +1,6 @@
 # Airship demos
 
-## Dashboard
+## Dashboard
 
 - [Dashboard](dashboard): a fake dashboard built using Airship (style, components and icons).
 
