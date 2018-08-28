@@ -6,7 +6,8 @@
 
 <script>
 import L from 'leaflet';
-import carto from '@carto/carto.js'
+import carto from '@carto/carto.js';
+import 'leaflet/dist/leaflet.css';
 
 export default {
   name: 'Map',
