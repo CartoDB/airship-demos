@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Airship loves webpack</title>
+  <!-- All our app code is bundled in this single file -->
+  <script src="dist/bundle.js"></script>
+
+</head>
+
+<!-- We can use CSS Elements, Icons and Web components: -->
+<body class="as-app">
+  <header class="as-toolbar">
+    <div class="as-toolbar__item as-title"><i class="as-icon-home"></i></div>
+  </header>
+
+  <main class="as-app-content">
+    <aside class="as-sidebar as-sidebar--left as-p--12">
+      <h1 class="as-title">Hello Airship</h1>
+      <as-range-slider class="as-p--8"></as-range-slider>
+    </aside>
+
+    <div class="as-map-wrapper">
+      <div class="as-map">
+        <div id="map"></div>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>

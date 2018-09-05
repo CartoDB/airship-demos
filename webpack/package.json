@@ -1,0 +1,32 @@
+{
+  "name": "airship-webpack-example",
+  "version": "1.0.0",
+  "description": "Showing how to use airship with webpack",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/CartoDB/airship-demos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CartoDB/airship-demos/issues"
+  },
+  "homepage": "https://github.com/CartoDB/airship-demos#readme",
+  "dependencies": {
+    "@carto/airship-components": "^1.0.0-alpha.37",
+    "@carto/airship-icons": "^1.0.0-alpha.37",
+    "@carto/airship-style": "^1.0.0-alpha.37",
+    "css-loader": "^1.0.0",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "url-loader": "^1.1.1",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
+  }
+}
