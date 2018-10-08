@@ -1,0 +1,9 @@
+/* @import '../../node_modules/@carto/airship-style/dist/airship.css'; */
+
+
+.as-body {
+  font-size: 40px;
+}
+body {
+  background-color: #000;
+}

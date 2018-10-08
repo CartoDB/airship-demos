@@ -1,8 +1,10 @@
 <template>
   <as-category-widget ref="category"
+    class="as-p-32"
     show-clear-button
     heading="Neighbourhood"
     description="Name of the neighborhood flat belongs to"
+    categories={this.categories}
     >
   </as-category-widget>
 </template>
@@ -22,11 +24,11 @@ export default {
       this.categoryStore.setSelected(e.detail);
     });
   },
-  watch: {
-    categories: function (newVal) {
-      this.category.categories = newVal;
-    }
-  }
+  // watch: {
+  //   categories: function (newVal) {
+  //     this.category.categories = newVal;
+  //   }
+  // }
 }
 </script>
 

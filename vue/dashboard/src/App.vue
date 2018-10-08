@@ -1,15 +1,16 @@
 <template>
   <div class="as-app">
-    <main class="as-app-content">
-      <div class="as-map-wrapper">
-        <Map 
-          v-bind:histogramStore="histogramData"
-          v-bind:categoriesStore="categoriesData"
-          v-bind:histogramRange="histogramData.range"
-          v-bind:categoriesFilter="categoriesData.selectedCats"
-        />
+    <main class="as-content">
+      <div class="as-main">
+        <div class="as-map-area">
+          <Map
+            v-bind:histogramStore="histogramData"
+            v-bind:categoriesStore="categoriesData"
+            v-bind:histogramRange="histogramData.range"
+            v-bind:categoriesFilter="categoriesData.selectedCats"
+          />
+        </div>
       </div>
-
       <aside class="as-sidebar as-sidebar--l as-sidebar--right" data-name="General info">
         <div class="as-container as-container--scrollable">
           <section class="as-box as-m--16">
