@@ -24,11 +24,11 @@ export default {
       this.categoryStore.setSelected(e.detail);
     });
   },
-  // watch: {
-  //   categories: function (newVal) {
-  //     this.category.categories = newVal;
-  //   }
-  // }
+  watch: {
+    categories: function (newVal) {
+      this.category.categories = newVal;
+    }
+  }
 }
 </script>
 

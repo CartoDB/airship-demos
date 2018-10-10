@@ -18,11 +18,11 @@ export class AppComponent {
     { name: 'Leisure', value: 760 }
   ]
 
-  getSelectedCategories() {
-    return this.categoryWidget.nativeElement.getSelectedCategories();
+  async getSelectedCategories() {
+    return await this.categoryWidget.nativeElement.getSelectedCategories();
   }
 
-  clearWidgetSelection() {
-    this.categoryWidget.nativeElement.clearSelection();
+  async clearWidgetSelection() {
+    await this.categoryWidget.nativeElement.clearSelection();
   }
 }
